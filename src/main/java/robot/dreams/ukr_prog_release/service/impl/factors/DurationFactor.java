@@ -1,7 +1,7 @@
 package robot.dreams.ukr_prog_release.service.impl.factors;
 
-import robot.dreams.ukr_prog_release.models.Configuration;
-import robot.dreams.ukr_prog_release.models.Programmer;
+import robot.dreams.ukr_prog_release.models.entity.Configuration;
+import robot.dreams.ukr_prog_release.models.entity.Programmer;
 import robot.dreams.ukr_prog_release.models.enums.Factor;
 import robot.dreams.ukr_prog_release.service.FactorService;
 

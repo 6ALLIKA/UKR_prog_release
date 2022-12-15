@@ -4,7 +4,7 @@ package robot.dreams.ukr_prog_release.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import robot.dreams.ukr_prog_release.models.Programmer;
+import robot.dreams.ukr_prog_release.models.entity.Programmer;
 import robot.dreams.ukr_prog_release.service.GameService;
 import robot.dreams.ukr_prog_release.service.RepositoryService;
 import robot.dreams.ukr_prog_release.service.FactorService;

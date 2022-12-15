@@ -1,7 +1,7 @@
 package robot.dreams.ukr_prog_release.service.impl.factors;
 
-import robot.dreams.ukr_prog_release.models.Configuration;
-import robot.dreams.ukr_prog_release.models.Programmer;
+import robot.dreams.ukr_prog_release.models.entity.Configuration;
+import robot.dreams.ukr_prog_release.models.entity.Programmer;
 import robot.dreams.ukr_prog_release.models.enums.Factor;
 import robot.dreams.ukr_prog_release.service.FactorService;
 
@@ -9,20 +9,19 @@ import java.time.LocalDateTime;
 import java.util.Set;
 
 public abstract class HealthFactor implements FactorService {
-    private LocalDateTime lastTime = null;
 
     @Override
     public boolean step(Programmer programmer, LocalDateTime now) {
         Configuration configuration = programmer.getConfiguration();
         Set<Factor> factors = programmer.getProgression().getFactors();
-        boolean isHungry = factors.contains(factor());
+        boolean isNeedAttention = factors.contains(factor());
         if (isProceed(configuration)) {
-            if (!isHungry) {
+            if (!isNeedAttention) {
                 factors.add(factor());
-                isHungry = true;
+                isNeedAttention = true;
             }
         }
-        if (isHungry) {
+        if (isNeedAttention) {
             boolean eat = ask(factors);
             if (!eat) {
                 programmer.getProgression().setHealthCondition(programmer.getProgression().getHealthCondition() - 1);

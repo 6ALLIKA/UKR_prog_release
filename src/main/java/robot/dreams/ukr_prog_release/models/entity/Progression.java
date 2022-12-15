@@ -1,4 +1,4 @@
-package robot.dreams.ukr_prog_release.models;
+package robot.dreams.ukr_prog_release.models.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

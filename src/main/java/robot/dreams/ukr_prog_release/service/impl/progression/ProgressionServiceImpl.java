@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import robot.dreams.ukr_prog_release.dao.ProgressionRepository;
 import robot.dreams.ukr_prog_release.exception.AppNotFound;
-import robot.dreams.ukr_prog_release.models.Progression;
+import robot.dreams.ukr_prog_release.models.entity.Progression;
 import robot.dreams.ukr_prog_release.service.RepositoryService;
 
 @Service
